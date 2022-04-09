@@ -1,0 +1,15 @@
+// server side : spoauth
+// client side : authentication required programs
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+option go_package = "github.com/codeslala/gotil/proto/authorize";
+package authorize;
+
+service Authorize {
+    rpc Authorize (Request) returns (google.protobuf.Empty) {
+    }
+}
+
+message Request {
+    string authorization = 1;
+}
